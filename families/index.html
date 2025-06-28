@@ -599,12 +599,12 @@
     </div>
 </div>
 <style>
-    .friends-container {
+    .families-container {
         margin-top: -100px;
         margin-bottom: 30px;
     }
 
-    .friends-container .tag-title {
+    .families-container .tag-title {
         margin-bottom: 10px;
         color: #3C4858;
         font-size: 1.75rem;
@@ -645,17 +645,17 @@
         left: 3px;
     }
 
-    .friend-button {
+    .family-button {
         display: flex;
         justify-content: center;
         margin-bottom: -27px;
     }
 
-    .friend-button a {
+    .family-button a {
         border-radius: 40px;
     }
 
-    .friend-all .tag-post {
+    .family-all .tag-post {
         margin-bottom: 30px;
     }
 
@@ -788,13 +788,39 @@
 </style>
 
 <main class="content">
-    <div class="container friends-container">
+    <div class="container families-container">
         <div class="card">
             <div class="card-content">
                 <div class="tag-title center-align">
-                    <i class="fas fa-address-book"></i>&nbsp;&nbsp;Friends
+                    <i class="fas fa-address-book"></i>&nbsp;&nbsp;families
                 </div>
-                <article id="friends-link">
+                <article id="families-link">
+                    
+                    
+                    <div class="row tags-posts family-all">
+                        
+                        
+                        <div class="col s12 m6 l4 family-div" data-aos="zoom-in-up">
+                            <div class="card frind-card1">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://aliasrevir.github.io/images/avatar-plain.png" alt="img">
+                                        <div>
+                                            <h1 class="family-name">XiEn</h1>
+                                            <p style="position: relative;top: -35px;">是可爱的龙弟弟喵</p>
+                                        </div>
+                                    </div>
+                                    <div class="family-button">
+                                        <a href="https://aliasrevir.github.io/" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            XiEn&#39;s Cave
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
                     
                 </article>
             </div>
@@ -824,8 +850,8 @@
 
 <script>
     $(function () {
-        $('#friends-link').masonry({
-            itemSelector: '.friend-div'
+        $('#families-link').masonry({
+            itemSelector: '.family-div'
         });
     });
 </script>
