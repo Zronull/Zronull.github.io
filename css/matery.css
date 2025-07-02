@@ -34,7 +34,7 @@
 }
 
 body {
-    background-color: #eaeaea;
+    background-color: #2d3333;
     margin: 0;
     color: #34495e;
     overflow-x: hidden;
@@ -241,7 +241,7 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #714c4c 0%, #ffffff 100%);
+    background-image: linear-gradient(to right, #42504e 0%, #c7cacc 100%);
 }
 
 .text-color {
@@ -549,12 +549,12 @@ header .go-back i {
 .post-cover {
     height: 40vh !important;
 }
-
+/*
 .bg-cover:after {
     -webkit-animation: rainbow 60s infinite;
     animation: rainbow 60s infinite;
 }
-
+*/
 .bg-cover:before,
 .bg-cover:after {
     position: absolute;
@@ -592,7 +592,7 @@ header .go-back i {
     font-size: 2.5rem;
     font-weight: 400;
 }
-
+/*
 @-webkit-keyframes rainbow {
 
     0%,
@@ -684,6 +684,8 @@ header .go-back i {
         background: -webkit-linear-gradient(135deg, rgba(2233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
     }
 }
+
+*/
 
 .index-card {
     margin-top: -10px;
@@ -2147,7 +2149,7 @@ p.search-result-summary{
 /* tag button */
 body.DarkMode .theme-btn {
     background: #222;
-    border: 2px solid #555;
+    border: 2px solid #7a7979;
     border-radius: 2px;
     color: #ccc !important;
     display: inline-block;
