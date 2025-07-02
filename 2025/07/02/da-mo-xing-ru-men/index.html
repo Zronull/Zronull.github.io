@@ -672,8 +672,15 @@
 <p>而对于文本分析，每句话则可以看成是样本，而我们需要解决的问题则是如何通过每个单词构成的句子（样本），寻找能使得让单词组成一句话的通用规律，从而使得计算机能够通过这个通用规律生成一句正常的话（甚至拥有正常的语句逻辑）。</p>
 <hr>
 <h3 id="One-hot编码"><a href="#One-hot编码" class="headerlink" title="One-hot编码"></a>One-hot编码</h3><p>将一句话进行拆分，通过对每个不同的单词进行单独编码，形式为一个向量，其中一个数位为1，其余数位皆为0（单词组的自由度/维度即为单词总个数）</p>
-<p>例如<br>I have an apple and a banana.<br>根据One-hot编码，即可得出一组七维向量<br>矩阵形式为<br>$$\begin{bmatrix}<br>1&amp;0&amp;0&amp;{\cdots}&amp;0&amp;→&amp; I\<br>0&amp;1&amp;0&amp;{\cdots}&amp;0&amp;→&amp; have\<br>0&amp;0&amp;1&amp;{\cdots}&amp;0&amp;→&amp; an\<br>{\vdots}&amp;{\vdots}&amp;{\vdots}&amp;{\ddots}&amp;{\vdots}&amp;→&amp; {\vdots}\<br>0&amp;0&amp;0&amp;{\cdots}&amp;1&amp;→&amp; banana\<br>\end{bmatrix}$$</p>
-<p>One-hot编码固然可以解决区分每个单词的目的，<strong>但是显而易见的并非所有单词都是可以独立或自由变化的</strong>（单词与单词之间本身就具有关联性），采用余弦相似度计算时就会出现问题。</p>
+<p>例如<br>I have an apple and a banana.<br>根据One-hot编码，即可得出一组七维向量<br>矩阵形式为</p>
+<center>
+
+<p>$$\begin{bmatrix}<br>1&amp;0&amp;0&amp;{\cdots}&amp;0&amp;→&amp; I\\<br>0&amp;1&amp;0&amp;{\cdots}&amp;0&amp;→&amp; have\\<br>0&amp;0&amp;1&amp;{\cdots}&amp;0&amp;→&amp; an\\<br>{\vdots}&amp;{\vdots}&amp;{\vdots}&amp;{\ddots}&amp;{\vdots}&amp;→&amp; {\vdots}\\<br>0&amp;0&amp;0&amp;{\cdots}&amp;1&amp;→&amp; banana\<br>\end{bmatrix}$$</p>
+</center>
+One-hot编码固然可以解决区分每个单词的目的，**但是显而易见的并非所有单词都是可以独立或自由变化的**（单词与单词之间本身就具有关联性），采用余弦相似度计算时就会出现问题。 
+ 
+<br>
+
 <blockquote>
 <p>还记得空间向量夹角计算吗，给他套个余弦符号，同向为1，异向为-1，正交为0.</p>
 </blockquote>
@@ -1009,6 +1016,13 @@
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
 
 
 <script src="https://giscus.app/client.js"
